@@ -1,0 +1,38 @@
+.maincont {
+  display: flex;
+  align-items: flex-start;
+  height: 100vh;
+  flex-direction: column;
+  width: 80vw;
+  background-color: aqua;
+}
+input {
+  font-size: 1rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.applicationcont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.modulerow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+}
+.appinput {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  background-color: brown;
+}

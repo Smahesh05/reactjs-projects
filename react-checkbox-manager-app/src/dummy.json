@@ -1,0 +1,62 @@
+[
+  {
+    "appId": 1,
+    "appName": "appp1",
+    "modules": [
+      {
+        "moduleId": 1,
+        "name": "module1",
+        "add": false,
+        "edit": false,
+        "remove": false,
+        "view": false
+      },
+      {
+        "moduleId": 2,
+        "name": "module2",
+        "add": false,
+        "edit": false,
+        "remove": false,
+        "view": false
+      },
+      {
+        "moduleId": 3,
+        "name": "module3",
+        "add": false,
+        "edit": false,
+        "remove": false,
+        "view": false
+      }
+    ]
+  },
+  {
+    "appId": 2,
+    "appName": "appp2",
+    "modules": [
+      {
+        "moduleId": 1,
+        "name": "module1",
+        "add": false,
+        "edit": false,
+        "remove": false,
+        "view": false
+      },
+      {
+        "moduleId": 2,
+        "name": "module2",
+        "add": false,
+        "edit": false,
+        "remove": false,
+        "view": false
+      },
+      {
+        "moduleId": 3,
+        "name": "module3",
+        "add": false,
+        "edit": false,
+        "remove": false,
+        "view": false
+      }
+    ]
+  }
+]
