@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
+import { Navigate, Route, Routes } from "react-router-dom";
+
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import Login from "./components/Login/Login.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
@@ -9,10 +9,11 @@ function App() {
   return (
     <UserProvider>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route index path="/" element={<Login />} />
         <Route element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
         </Route>
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </UserProvider>
   );

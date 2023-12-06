@@ -17,7 +17,7 @@ const Header = () => {
           <a>{username}</a>
         </li>
         <li className="logout-btn">
-          <Link to={"/login"} onClick={logout}>
+          <Link to={"/"} onClick={logout}>
             Logout
           </Link>
         </li>
