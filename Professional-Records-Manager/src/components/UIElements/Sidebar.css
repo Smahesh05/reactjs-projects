@@ -1,0 +1,18 @@
+.sidebar {
+  height: 100vh;
+  background-color: yellow;
+  width: 150px;
+  text-align: center;
+  text-transform: uppercase;
+
+  padding: 10px 0px;
+}
+
+.sidebar h3 {
+  margin: 0;
+  border-bottom: 2px solid black;
+  padding-bottom: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 17px;
+}
