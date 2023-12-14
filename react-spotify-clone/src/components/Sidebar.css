@@ -1,0 +1,17 @@
+.side-bar-container {
+  color: rgb(197, 197, 197);
+}
+
+.side-bar-items {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  gap: 10px;
+  height: 100%;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.sidebar-options {
+  margin-top: 40px;
+}
