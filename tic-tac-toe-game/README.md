@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+## live link [tic-tac-toe](https://react-tic-tac-toe-game-123.netlify.app/)
 In the project directory, you can run:
 
 ### `npm start`
