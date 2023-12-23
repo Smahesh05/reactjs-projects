@@ -1,10 +1,13 @@
 # Getting Started with Create React App
 
+[tic-tac-toe](https://react-tic-tac-toe-game-123.netlify.app/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-## live link [tic-tac-toe](https://react-tic-tac-toe-game-123.netlify.app/)
+
+
 In the project directory, you can run:
 
 ### `npm start`
