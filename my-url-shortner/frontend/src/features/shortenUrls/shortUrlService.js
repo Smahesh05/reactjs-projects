@@ -10,6 +10,7 @@ const createUrl = async (urlData, token) => {
   };
 
   const res = await axios.post(API_URL, urlData, config);
+  console.log(res);
 
   return res.data;
 };
