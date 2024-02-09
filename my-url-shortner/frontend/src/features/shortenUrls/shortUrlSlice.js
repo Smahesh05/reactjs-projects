@@ -27,7 +27,7 @@ export const createUrl = createAsyncThunk(
   }
 );
 
-export const getUrls = createAsyncThunk("urls/getAll", async (_, thunkAPI) => {
+export const getUrls = createAsyncThunk("url/getAll", async (_, thunkAPI) => {
   try {
     // const token = thunkAPI.getState().auth.user.token;
     const token = thunkAPI.getState().auth.user.token;
