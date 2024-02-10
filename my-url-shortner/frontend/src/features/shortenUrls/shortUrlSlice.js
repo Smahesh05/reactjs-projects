@@ -10,7 +10,7 @@ const initialState = {
 };
 
 export const createUrl = createAsyncThunk(
-  "urls/create",
+  "createUrl",
   async (urlData, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token;
@@ -27,11 +27,9 @@ export const createUrl = createAsyncThunk(
   }
 );
 
-export const getUrls = createAsyncThunk("url/getAll", async (_, thunkAPI) => {
+export const getUrls = createAsyncThunk("getUrls", async (thunkAPI) => {
   try {
-    // const token = thunkAPI.getState().auth.user.token;
     const token = thunkAPI.getState().auth.user.token;
-    console.log(token);
     return await urlService.getUrls(token);
   } catch (error) {
     const message =
@@ -44,23 +42,18 @@ export const getUrls = createAsyncThunk("url/getAll", async (_, thunkAPI) => {
   }
 });
 
-export const deleteUrl = createAsyncThunk(
-  "urls/delete",
-  async (id, thunkAPI) => {
-    try {
-      const token = thunkAPI.getState().auth.user.token;
-      return await urlService.deleteUrl(id, token);
-    } catch (error) {
-      const message =
-        (error.response &&
-          error.response.data &&
-          error.response.data.message) ||
-        error.message ||
-        error.toString();
-      return thunkAPI.rejectWithValue(message);
-    }
+export const deleteUrl = createAsyncThunk("deleteUrl", async (id, thunkAPI) => {
+  try {
+    const token = thunkAPI.getState().auth.user.token;
+    return await urlService.deleteUrl(id, token);
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    return thunkAPI.rejectWithValue(message);
   }
-);
+});
 
 export const urlSlice = createSlice({
   name: "url",

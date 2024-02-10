@@ -8,9 +8,8 @@ const createUrl = async (urlData, token) => {
       Authorization: `Bearer ${token}`,
     },
   };
-
+  console.log(config, "Hello");
   const res = await axios.post(API_URL, urlData, config);
-
   return res.data;
 };
 

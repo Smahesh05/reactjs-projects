@@ -15,7 +15,7 @@ const Dashboard = () => {
     (state) => state.urls
   );
 
-  // console.log(urls);
+  console.log(urls);
   useEffect(() => {
     if (isError) {
       toast.error(message);
