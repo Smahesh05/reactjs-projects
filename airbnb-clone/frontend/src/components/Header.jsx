@@ -1,9 +1,26 @@
-import React, { useContext } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { UserContext } from "../context/UserContext";
 
 const Header = () => {
-  const { user } = useContext(UserContext);
+  const { userInfo } = useSelector((state) => state.auth);
+
+  console.log(userInfo);
+
+  // const dispatch = useDispatch();
+  // const navigate = useNavigate();
+
+  // const [logoutApiCall] = useLogoutMutation();
+
+  // const logoutHandler = async () => {
+  //   try {
+  //     await logoutApiCall().unwrap();
+  //     dispatch(logout());
+  //     navigate("/login");
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
   return (
     <React.Fragment>
       <div className="flex items-center justify-between">
@@ -69,7 +86,7 @@ const Header = () => {
           </svg>
 
           <Link
-            to={user ? "/account" : "/login"}
+            to={userInfo ? "/account" : "/login"}
             className=" bg-gray-500 text-white rounded-full border border-gray-500"
           >
             <svg
@@ -85,7 +102,7 @@ const Header = () => {
               />
             </svg>
           </Link>
-          {!!user && <div>{user.name}</div>}
+          {userInfo && <div>{userInfo.name}</div>}
         </div>
       </div>
     </React.Fragment>

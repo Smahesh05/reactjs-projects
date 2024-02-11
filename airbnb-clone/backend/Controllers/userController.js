@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 
 const jwtSecret = "ajhdkbkjsakshiu";
 
+// register user
 const registerUser = async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -36,6 +37,7 @@ const registerUser = async (req, res) => {
   }
 };
 
+//login user
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
 
@@ -54,6 +56,14 @@ const loginUser = async (req, res) => {
   }
 };
 
+const logoutUser = (req, res) => {
+  res.cookie("jwt", "", {
+    httpOnly: true,
+    expiresIn: new Date(0),
+  });
+  res.status(200).json({ message: "Logged out successfully" });
+};
+
 const getMe = async (req, res) => {
   res.status(200).json(req.user);
 };
@@ -64,4 +74,4 @@ const generateToken = (id) => {
   });
 };
 
-module.exports = { registerUser, loginUser, getMe };
+module.exports = { registerUser, loginUser, getMe, logoutUser };

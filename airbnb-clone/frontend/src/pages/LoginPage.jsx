@@ -1,6 +1,9 @@
-import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { setCredentials } from "../slices/authSlice";
+import { useLoginMutation } from "../slices/usersApiSlice";
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -9,9 +12,21 @@ const LoginPage = () => {
   });
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const [login] = useLoginMutation();
+
+  const { userInfo } = useSelector((state) => state.auth);
 
   const { email, password } = formData;
 
+  useEffect(() => {
+    if (userInfo) {
+      navigate("/");
+    }
+  }, [navigate, userInfo]);
+
+  //changeHnadler
   const onChangeHandler = (e) => {
     setFormData((prev) => ({
       ...prev,
@@ -19,31 +34,20 @@ const LoginPage = () => {
     }));
   };
 
+  //submit Handler
   const onSubmitHandler = async (e) => {
     e.preventDefault();
 
-    const userInfo = {
-      email,
-      password,
-    };
-
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/users/login",
-        userInfo
-      );
-
-      if (response.data) {
-        localStorage.setItem("user", JSON.stringify(response.data));
-      }
-
+      const response = await login(formData).unwrap();
+      dispatch(setCredentials({ ...response }));
       setFormData({
         email: "",
         password: "",
       });
       navigate("/");
     } catch (err) {
-      console.log(err);
+      toast.error(err?.data?.message || err.error);
     }
   };
 

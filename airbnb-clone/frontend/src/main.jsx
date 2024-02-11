@@ -1,13 +1,14 @@
 import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
-import { UserContextProvider } from "./context/UserContext.jsx";
+import store from "./app/store.js";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <UserContextProvider>
+  <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </UserContextProvider>
+  </Provider>
 );

@@ -1,7 +1,27 @@
-import { Link, Outlet, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+import { logout } from "../slices/authSlice";
+import { useLogoutMutation } from "../slices/usersApiSlice";
 
 const AccountPage = () => {
   let { subPage } = useParams();
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { userInfo } = useSelector((state) => state.auth);
+
+  const [logoutApiCall] = useLogoutMutation();
+
+  const logoutHandler = async () => {
+    try {
+      await logoutApiCall().unwrap();
+      dispatch(logout());
+      navigate("/login");
+    } catch (err) {
+      toast.error(err);
+    }
+  };
 
   if (subPage === undefined) {
     subPage = "profile";
@@ -32,7 +52,15 @@ const AccountPage = () => {
         </Link>
       </nav>
 
-      <Outlet />
+      {subPage === "profile" && (
+        <div className="text-center max-w-lg mx-auto">
+          Logged in as {userInfo.name}
+          <br />
+          <button className="primary max-w-sm mt-2" onClick={logoutHandler}>
+            Log out
+          </button>
+        </div>
+      )}
     </div>
   );
 };

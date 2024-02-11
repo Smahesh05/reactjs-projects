@@ -1,6 +1,9 @@
-import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { setCredentials } from "../slices/authSlice";
+import { useRegisterMutation } from "../slices/usersApiSlice";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -10,9 +13,21 @@ const RegisterPage = () => {
   });
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const [register] = useRegisterMutation();
+
+  const { userInfo } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    if (userInfo) {
+      navigate("/");
+    }
+  }, [navigate, userInfo]);
 
   const { name, email, password } = formData;
 
+  // onChange handler
   const onChangeHandler = (e) => {
     setFormData((prev) => ({
       ...prev,
@@ -20,6 +35,7 @@ const RegisterPage = () => {
     }));
   };
 
+  // onsubmit handler for registration
   const onSubmithandler = async (e) => {
     e.preventDefault();
 
@@ -30,14 +46,9 @@ const RegisterPage = () => {
     };
 
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/users/",
-        userData
-      );
+      const res = await register(userData).unwrap();
+      dispatch(setCredentials({ ...res }));
 
-      if (res.data) {
-        localStorage.setItem("user", JSON.stringify(res.data));
-      }
       // console.log(userData);
       setFormData({
         name: "",
@@ -47,7 +58,7 @@ const RegisterPage = () => {
       navigate("/");
       console.log("Registration successful");
     } catch (err) {
-      console.error("Error during registration:", err.message);
+      toast.error(err?.data?.message || err.error);
     }
   };
   return (
