@@ -21,7 +21,7 @@ const RegisterPage = () => {
 
   useEffect(() => {
     if (userInfo) {
-      navigate("/");
+      navigate("/account");
     }
   }, [navigate, userInfo]);
 
@@ -49,13 +49,12 @@ const RegisterPage = () => {
       const res = await register(userData).unwrap();
       dispatch(setCredentials({ ...res }));
 
-      // console.log(userData);
       setFormData({
         name: "",
         email: "",
         password: "",
       });
-      navigate("/");
+      navigate("/account");
       console.log("Registration successful");
     } catch (err) {
       toast.error(err?.data?.message || err.error);

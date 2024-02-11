@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { logout } from "../slices/authSlice";
 import { useLogoutMutation } from "../slices/usersApiSlice";
+import PlacesPage from "./PlacesPage";
 
 const AccountPage = () => {
   let { subPage } = useParams();
@@ -61,6 +62,8 @@ const AccountPage = () => {
           </button>
         </div>
       )}
+
+      {subPage === "places" && <PlacesPage />}
     </div>
   );
 };

@@ -22,7 +22,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (userInfo) {
-      navigate("/");
+      navigate("/account");
     }
   }, [navigate, userInfo]);
 
@@ -45,7 +45,7 @@ const LoginPage = () => {
         email: "",
         password: "",
       });
-      navigate("/");
+      navigate("/account");
     } catch (err) {
       toast.error(err?.data?.message || err.error);
     }
