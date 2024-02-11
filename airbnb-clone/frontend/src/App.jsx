@@ -1,4 +1,3 @@
-import axios from "axios";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
@@ -12,7 +11,7 @@ import RegisterPage from "./pages/RegisterPage";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 
-axios.defaults.baseURL = "http://localhost:5000/api/users";
+// axios.defaults.baseURL = "http://localhost:5000/api/users";
 
 function App() {
   return (

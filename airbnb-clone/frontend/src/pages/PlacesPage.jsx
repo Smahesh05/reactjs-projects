@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
@@ -14,6 +15,21 @@ const PlacesPage = () => {
   const [maxGuests, setMaxGuests] = useState(1);
 
   const { action } = useParams();
+
+  const addPhotoBylinkHandler = async (e) => {
+    e.preventDefault();
+    const { data: fileName } = await axios.post(
+      "http://localhost:5000/api/places/upload-by-link",
+      {
+        link: photoLink,
+      }
+    );
+
+    setAddedPhotos((prev) => {
+      return [...prev, fileName];
+    });
+    setPhotoLink("");
+  };
 
   return (
     <div>
@@ -60,13 +76,26 @@ const PlacesPage = () => {
                   value={photoLink}
                   onChange={(e) => setPhotoLink(e.target.value)}
                 />
-                <button className="bg-gray-200 px-4 rounded-lg">
+
+                <button
+                  className="bg-gray-200 px-4 rounded-lg"
+                  onClick={addPhotoBylinkHandler}
+                >
                   Add&nbsp;photo
                 </button>
               </div>
-              <div className="mt-2 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+              <div className="mt-2 grid items-center gap-2 grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                <div>
+                  {addedPhotos.map((photo) => (
+                    <img
+                      key={photo}
+                      src={"http://localhost:5000/uploads/" + photo}
+                      alt=""
+                    />
+                  ))}
+                </div>
                 <button className="border bg-transparent rounded-xl p-3">
-                  +
+                  + Upload Photo
                 </button>
               </div>
             </>
