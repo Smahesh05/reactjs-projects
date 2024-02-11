@@ -31,10 +31,12 @@ const AccountPage = () => {
   // console.log(subPage);
 
   function activeClasses(type = null) {
-    let classes = "py-2 px-6";
+    let classes = "py-2 px-6 rounded-full";
 
     if (type === subPage) {
-      classes += " bg-primary text-white rounded-full";
+      classes += " bg-primary text-white ";
+    } else {
+      classes += " bg-gray-200";
     }
     return classes;
   }

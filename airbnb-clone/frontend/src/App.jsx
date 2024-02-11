@@ -27,6 +27,7 @@ function App() {
           <Route path="" element={<PrivateRoute />}>
             <Route path="/account" element={<AccountPage />} />
             <Route path="/account/:subPage?" element={<AccountPage />} />
+            <Route path="/account/:subPage/:action" element={<AccountPage />} />
           </Route>
         </Routes>
       </>
