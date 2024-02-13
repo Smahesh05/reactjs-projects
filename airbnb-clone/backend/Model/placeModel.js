@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const placeSchema = mongoose.Schema({
-  owner: {
+  user: {
     type: mongoose.Types.ObjectId,
     ref: "User",
   },
@@ -12,10 +12,10 @@ const placeSchema = mongoose.Schema({
   address: {
     type: String,
   },
+  photos: [String],
   description: {
     type: String,
   },
-  photos: [String],
   perks: [String],
   extraInfo: String,
   checkIn: Number,

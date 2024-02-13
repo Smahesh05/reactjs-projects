@@ -1,5 +1,9 @@
 const imageDownloader = require("image-downloader");
+const multer = require("multer");
 const path = require("path");
+const fs = require("fs");
+const PlaceModel = require("../Model/placeModel");
+const User = require("../Model/userModel");
 // console.log({ __dirname });
 
 const uploadPhotoByLink = async (req, res) => {
@@ -19,7 +23,51 @@ const uploadPhotoByLink = async (req, res) => {
   res.json(newName);
 };
 
+//upload photos
+const photoMiddleware = multer({ dest: "uploads/" });
+const uploadPhotoByDevice = (req, res) => {
+  photoMiddleware.array("photos", 100)(req, res, (err) => {
+    const uploadFiles = [];
+    req.files.forEach((file) => {
+      const { path, originalname } = file;
+      const fileExtension = originalname.split(".").pop();
+      const newPath = path + "." + fileExtension;
+      fs.renameSync(path, newPath);
+      uploadFiles.push(newPath.replace("uploads/", ""));
+    });
+
+    res.json(uploadFiles);
+  });
+};
+
+const addPlaces = async (req, res) => {
+  const {
+    title,
+    address,
+    photos,
+    description,
+    extraInfo,
+    checkIn,
+    checkOut,
+    maxGuests,
+  } = req.body;
+  const place = await PlaceModel.create({
+    user: req.user.id,
+    title,
+    address,
+    photos,
+    description,
+    extraInfo,
+    checkIn,
+    checkOut,
+    maxGuests,
+  });
+  res.status(201).json(place);
+};
+
 //module exports
 module.exports = {
   uploadPhotoByLink,
+  uploadPhotoByDevice,
+  addPlaces,
 };

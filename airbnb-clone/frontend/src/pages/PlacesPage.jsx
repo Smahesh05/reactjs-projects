@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import Perks from "../components/Perks";
 
 const PlacesPage = () => {
   const [title, setTitle] = useState("");
@@ -15,6 +17,9 @@ const PlacesPage = () => {
   const [maxGuests, setMaxGuests] = useState(1);
 
   const { action } = useParams();
+  const navigate = useNavigate();
+
+  const { userInfo } = useSelector((state) => state.auth);
 
   const addPhotoBylinkHandler = async (e) => {
     e.preventDefault();
@@ -31,6 +36,53 @@ const PlacesPage = () => {
     setPhotoLink("");
   };
 
+  const uploadPhoto = async (e) => {
+    const files = e.target.files;
+
+    const data = new FormData();
+    for (let i = 0; i < files.length; i++) {
+      data.append("photos", files[i]);
+    }
+    axios
+      .post("http://localhost:5000/api/places/upload-photo", data, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((response) => {
+        const { data: fileNames } = response;
+        console.log(fileNames);
+        setAddedPhotos((prev) => {
+          return [...prev, ...fileNames];
+        });
+      });
+  };
+
+  const addNewPlace = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      title,
+      address,
+      addedPhotos,
+      description,
+      perks,
+      checkIn,
+      checkOut,
+      extraInfo,
+      maxGuests,
+    };
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    };
+    await axios.post("http://localhost:5000/api/places/", data, config);
+    console.log(data);
+    navigate("/places");
+  };
+
   return (
     <div>
       {action !== "new" && (
@@ -45,7 +97,7 @@ const PlacesPage = () => {
       )}
       {action === "new" && (
         <div className="max-w-screen-lg mt-0 mx-auto">
-          <form>
+          <form onSubmit={addNewPlace}>
             <>
               <h2 className="text-2xl mt-4">Title</h2>
               <p className="text-gray-500 text-sm">Title for your place</p>
@@ -85,18 +137,25 @@ const PlacesPage = () => {
                 </button>
               </div>
               <div className="mt-2 grid items-center gap-2 grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-                <div>
+                <div className="h-32 flex">
                   {addedPhotos.map((photo) => (
                     <img
+                      className="rounded-2xl w-full object-cover"
                       key={photo}
                       src={"http://localhost:5000/uploads/" + photo}
                       alt=""
                     />
                   ))}
                 </div>
-                <button className="border bg-transparent rounded-xl p-3">
+                <label className="border bg-transparent rounded-xl p-3">
+                  <input
+                    type="file"
+                    className="hidden"
+                    multiple
+                    onChange={uploadPhoto}
+                  />
                   + Upload Photo
-                </button>
+                </label>
               </div>
             </>
             <>
@@ -110,31 +169,8 @@ const PlacesPage = () => {
             <>
               <h2 className="text-2xl mt-4">Perks</h2>
               <p className="text-gray-500 text-sm">Select all the perks</p>
-              <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-                <label className="border p-4 flex gap-2 items-center cursor-pointer">
-                  <input type="checkbox" />
-                  <span>Wifi</span>
-                </label>
-                <label className="border p-4 flex gap-2 items-center cursor-pointer">
-                  <input type="checkbox" />
-                  <span>TV</span>
-                </label>
-                <label className="border p-4 flex gap-2 items-center cursor-pointer">
-                  <input type="checkbox" />
-                  <span>Free&nbsp;Parking&nbsp;spot</span>
-                </label>
-                <label className="border p-4 flex gap-2 items-center cursor-pointer">
-                  <input type="checkbox" />
-                  <span>private&nbsp;Enterence</span>
-                </label>
-                <label className="border p-4 flex gap-2 items-center cursor-pointer">
-                  <input type="checkbox" />
-                  <span>pets</span>
-                </label>
-                <label className="border p-4 flex gap-2 items-center cursor-pointer">
-                  <input type="checkbox" />
-                  <span>Radio</span>
-                </label>
+              <div className="grid mt-2 gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                <Perks selected={perks} onChange={setPerks} />
               </div>
             </>
             <>
