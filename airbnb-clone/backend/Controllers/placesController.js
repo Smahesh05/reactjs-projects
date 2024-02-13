@@ -40,6 +40,14 @@ const uploadPhotoByDevice = (req, res) => {
   });
 };
 
+//get places
+
+const getPlaces = async (req, res) => {
+  const places = await PlaceModel.find({ user: req.user.id });
+  res.status(200).json(places);
+};
+
+//add placess
 const addPlaces = async (req, res) => {
   const {
     title,
@@ -51,6 +59,9 @@ const addPlaces = async (req, res) => {
     checkOut,
     maxGuests,
   } = req.body;
+
+  // Assuming you have an authentication middleware that sets the user ID in the request object
+
   const place = await PlaceModel.create({
     user: req.user.id,
     title,
@@ -70,4 +81,5 @@ module.exports = {
   uploadPhotoByLink,
   uploadPhotoByDevice,
   addPlaces,
+  getPlaces,
 };

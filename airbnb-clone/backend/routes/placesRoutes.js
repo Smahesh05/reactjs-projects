@@ -3,6 +3,7 @@ const {
   uploadPhotoByLink,
   uploadPhotoByDevice,
   addPlaces,
+  getPlaces,
 } = require("../Controllers/placesController");
 const { protect } = require("../middleware/authMiddleware");
 
@@ -10,6 +11,7 @@ const router = express.Router();
 
 router.post("/upload-by-link", uploadPhotoByLink);
 router.post("/upload-photo", uploadPhotoByDevice);
-router.post("/", protect, addPlaces);
+router.get("/", protect, getPlaces);
+router.post("/add", protect, addPlaces);
 
 module.exports = router;

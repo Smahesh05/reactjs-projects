@@ -2,8 +2,6 @@ const bcrypt = require("bcrypt");
 const User = require("../Model/userModel");
 const jwt = require("jsonwebtoken");
 
-const jwtSecret = "ajhdkbkjsakshiu";
-
 // register user
 const registerUser = async (req, res) => {
   const { name, email, password } = req.body;
@@ -69,7 +67,7 @@ const getMe = async (req, res) => {
 };
 
 const generateToken = (id) => {
-  return jwt.sign({ id }, jwtSecret, {
+  return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: "30d",
   });
 };

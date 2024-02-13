@@ -73,14 +73,21 @@ const PlacesPage = () => {
       maxGuests,
     };
 
-    const config = {
-      headers: {
-        Authorization: `Bearer ${userInfo.token}`,
-      },
-    };
-    await axios.post("http://localhost:5000/api/places/", data, config);
-    console.log(data);
-    navigate("/places");
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/places/add",
+        data,
+        {
+          headers: {
+            Authorization: "Bearer " + userInfo.token,
+          },
+        }
+      );
+      console.log(data, res);
+      navigate("/account/places");
+    } catch (error) {
+      console.error("Error adding new place:", error);
+    }
   };
 
   return (
@@ -95,6 +102,17 @@ const PlacesPage = () => {
           </Link>
         </div>
       )}
+      <div className="mt-4">
+        <Link to={"/account/places/id"}>
+          <div className="flex gap-4 bg-gray-100 p-4 rounded">
+            <div className="w-32 h-32 bg-gray-300 shrink-0"></div>
+            <div className="grow-0 shrink">
+              <h2 className="text-xl">title</h2>
+              <p className="text-sm mt-2">Description</p>
+            </div>
+          </div>
+        </Link>
+      </div>
       {action === "new" && (
         <div className="max-w-screen-lg mt-0 mx-auto">
           <form onSubmit={addNewPlace}>
