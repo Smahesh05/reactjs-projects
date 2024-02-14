@@ -4,6 +4,7 @@ const path = require("path");
 const fs = require("fs");
 const PlaceModel = require("../Model/placeModel");
 const User = require("../Model/userModel");
+const { default: mongoose } = require("mongoose");
 // console.log({ __dirname });
 
 const uploadPhotoByLink = async (req, res) => {
@@ -11,7 +12,7 @@ const uploadPhotoByLink = async (req, res) => {
 
   const newName = "photo" + Date.now() + ".jpg";
 
-  const parentDir = path.join(__dirname, "..");
+  const parentDir = path.join(__dirname, "../");
 
   const uploadFolderPath = path.join(parentDir, "uploads");
 
@@ -40,9 +41,15 @@ const uploadPhotoByDevice = (req, res) => {
   });
 };
 
-//get places
+// get all Places
 
-const getPlaces = async (req, res) => {
+const getAllPlaces = async (req, res) => {
+  res.json(await PlaceModel.find());
+};
+
+//get places by user ID
+
+const getMyPlaces = async (req, res) => {
   const places = await PlaceModel.find({ user: req.user.id });
   res.status(200).json(places);
 };
@@ -76,10 +83,10 @@ const addPlaces = async (req, res) => {
   res.status(201).json(place);
 };
 
-// get single place
-const getPlaceById = (req, res) => {
-  const { id } = req.params.id;
-  const place = PlaceModel.findById(id);
+// get place by place ID
+const getPlaceById = async (req, res) => {
+  const { id } = req.params;
+  const place = await PlaceModel.findById(id);
   res.json(place);
 };
 
@@ -88,6 +95,7 @@ module.exports = {
   uploadPhotoByLink,
   uploadPhotoByDevice,
   addPlaces,
-  getPlaces,
+  getAllPlaces,
+  getMyPlaces,
   getPlaceById,
 };
