@@ -76,10 +76,18 @@ const addPlaces = async (req, res) => {
   res.status(201).json(place);
 };
 
+// get single place
+const getPlaceById = (req, res) => {
+  const { id } = req.params.id;
+  const place = PlaceModel.findById(id);
+  res.json(place);
+};
+
 //module exports
 module.exports = {
   uploadPhotoByLink,
   uploadPhotoByDevice,
   addPlaces,
   getPlaces,
+  getPlaceById,
 };

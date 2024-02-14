@@ -4,6 +4,7 @@ const {
   uploadPhotoByDevice,
   addPlaces,
   getPlaces,
+  getPlaceById,
 } = require("../Controllers/placesController");
 const { protect } = require("../middleware/authMiddleware");
 
@@ -13,5 +14,6 @@ router.post("/upload-by-link", uploadPhotoByLink);
 router.post("/upload-photo", uploadPhotoByDevice);
 router.get("/", protect, getPlaces);
 router.post("/add", protect, addPlaces);
+router.get("/:id", protect, getPlaceById);
 
 module.exports = router;
