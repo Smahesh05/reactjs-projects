@@ -147,7 +147,7 @@ const PlacesFormPage = () => {
               Add&nbsp;photo
             </button>
           </div>
-          <div className="mt-2 grid items-center gap-2 grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          <div className="mt-2 grid gap-2 grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
             {addedPhotos.map((photo) => (
               <div className="h-32 flex relative" key={photo}>
                 <img
@@ -157,12 +157,12 @@ const PlacesFormPage = () => {
                 />
                 <button
                   onClick={(e) => removePhoto(e, photo)}
-                  className="cursor-pointer text-white bg-black bg-opacity-50 bottom-1 right-1 rounded-2xl py-2 px-2"
+                  className="cursor-pointer absolute bottom-1 right-1 text-white bg-black bg-opacity-50 rounded-2xl py-2 px-3"
                 >
                   X
                 </button>
                 <button
-                  className="cursor-pointer text-white bg-black bg-opacity-50 bottom-1 left-1 rounded-2xl py-2 px-2"
+                  className="cursor-pointer absolute bottom-1 left-1 text-white bg-black bg-opacity-50 rounded-2xl py-2 px-3"
                   onClick={(e) => addPhotoToFavorite(e, photo)}
                 >
                   {photo === addedPhotos[0] ? (
@@ -197,14 +197,14 @@ const PlacesFormPage = () => {
                 </button>
               </div>
             ))}
-            <label className="border bg-transparent rounded-xl p-3">
+            <label className="h-32 cursor-pointer flex items-center gap-1 justify-center border bg-transparent rounded-2xl p-2 text-2xl text-gray-600">
               <input
                 type="file"
                 className="hidden"
                 multiple
                 onChange={uploadPhoto}
               />
-              + Upload Photo
+              +UploadPhoto
             </label>
           </div>
         </>
