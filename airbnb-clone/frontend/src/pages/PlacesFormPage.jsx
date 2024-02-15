@@ -51,7 +51,7 @@ const PlacesFormPage = () => {
       })
       .then((response) => {
         const { data: fileNames } = response;
-        console.log(fileNames);
+        // console.log(fileNames);
         setAddedPhotos((prev) => {
           return [...prev, ...fileNames];
         });

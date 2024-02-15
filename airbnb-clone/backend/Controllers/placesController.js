@@ -4,8 +4,6 @@ const path = require("path");
 const fs = require("fs");
 const PlaceModel = require("../Model/placeModel");
 const User = require("../Model/userModel");
-const { default: mongoose } = require("mongoose");
-// console.log({ __dirname });
 
 const uploadPhotoByLink = async (req, res) => {
   const { link } = req.body;

@@ -1,20 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [places, setPlaces] = useState([]);
 
-  const { userInfo } = useSelector((state) => state.auth);
-
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/places/get", {
-        // headers: {
-        //   Authorization: "Bearer " + userInfo.token,
-        // },
-      })
+      .get("http://localhost:5000/api/places/get", {})
 
       .then((data) => setPlaces(data.data));
   }, []);
@@ -28,9 +21,7 @@ const HomePage = () => {
               {place.photos?.[0] && (
                 <img
                   className="object-cover aspect-square rounded-2xl"
-                  src={
-                    "http://localhost:5000/backend/uploads/" + place.photos?.[0]
-                  }
+                  src={"http://localhost:5000/uploads/" + place.photos?.[0]}
                 />
               )}
             </div>
