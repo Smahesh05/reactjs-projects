@@ -4,6 +4,7 @@ const path = require("path");
 const fs = require("fs");
 const PlaceModel = require("../Model/placeModel");
 const User = require("../Model/userModel");
+const Booking = require("../Model/bookingModel");
 
 const uploadPhotoByLink = async (req, res) => {
   const { link } = req.body;
@@ -88,6 +89,21 @@ const getPlaceById = async (req, res) => {
   res.json(place);
 };
 
+const bookPlaceByPlaceId = async (req, res) => {
+  const { name, phone, place, checkIn, checkOut, price, numberOfguests } =
+    req.body;
+  const bookPlace = await Booking.create({
+    name,
+    phone,
+    place,
+    checkIn,
+    checkOut,
+    numberOfguests,
+    price,
+  });
+  res.status(201).json(bookPlace);
+};
+
 //module exports
 module.exports = {
   uploadPhotoByLink,
@@ -96,4 +112,5 @@ module.exports = {
   getAllPlaces,
   getMyPlaces,
   getPlaceById,
+  bookPlaceByPlaceId,
 };

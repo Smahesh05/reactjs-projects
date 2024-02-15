@@ -36,8 +36,8 @@ function App() {
             </Route>
             <Route path="/account/places/:id" element={<PlacesFormPage />} />
             <Route path="/account/places/new" element={<PlacesFormPage />} />
-            <Route path="/place/:id" element={<PlaceDetailsPage />} />
           </Route>
+          <Route path="/place/:id" element={<PlaceDetailsPage />} />
         </Routes>
       </>
     </div>
