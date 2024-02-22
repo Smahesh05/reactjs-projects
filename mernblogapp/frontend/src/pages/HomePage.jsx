@@ -1,5 +1,11 @@
+import PostItem from "../components/PostItem";
+
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <div>
+      <PostItem />
+    </div>
+  );
 };
 
 export default HomePage;
