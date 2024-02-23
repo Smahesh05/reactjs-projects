@@ -30,11 +30,14 @@ const Header = () => {
         {userInfo ? (
           <>
             <li>
-              <Link to="/create">Create One</Link>
+              <Link to="/create">Create</Link>
+            </li>
+            <li>
+              <FaUser className="fa-user-icon" /> Hi {userInfo.name}
             </li>
             <li>
               <Link to="/login" onClick={logoutHandler}>
-                <FaUser className="fa-user-icon" /> Logout
+                Logout
               </Link>
             </li>
           </>

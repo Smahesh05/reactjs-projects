@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
-
+app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use("/api/users/", routes);
 app.use("/api/posts/", postRoutes);
 

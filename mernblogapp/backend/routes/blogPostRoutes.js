@@ -4,10 +4,11 @@ const {
   getAllBlogPosts,
 } = require("../controllers/postController");
 const uploadMiddleware = require("../middleware/uploadMiddleware");
+const { protect } = require("../middleware/authMiddleware");
 
 const routes = express.Router();
 
 routes.get("/getposts", getAllBlogPosts);
-routes.post("/create", uploadMiddleware.single("file"), addBlogPost);
+routes.post("/create", protect, uploadMiddleware.single("file"), addBlogPost);
 
 module.exports = routes;
