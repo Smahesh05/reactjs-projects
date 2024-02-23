@@ -72,6 +72,11 @@ h3 {
   margin-left: 20px;
 }
 
+.header ul li .fa-user-icon {
+  cursor: pointer;
+  position: relative;
+}
+
 .header ul li a {
   display: flex;
   align-items: center;
@@ -142,6 +147,7 @@ button:hover {
   transform: scale(0.99);
 }
 
-form h1 {
+form.login h1,
+form.register h1 {
   text-align: center;
 }

@@ -5,6 +5,7 @@ import RegisterPage from "./pages/RegisterPage";
 
 import "./App.css";
 import Header from "./components/Header";
+import CreateBlogPage from "./pages/CreateBlogPage";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/create" element={<CreateBlogPage />} />
         </Routes>
       </main>
     </div>

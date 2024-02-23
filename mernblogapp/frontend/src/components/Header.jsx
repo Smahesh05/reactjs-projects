@@ -1,7 +1,9 @@
+import { FaUser } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../slices/authSlice";
 import { useLogoutMutation } from "../slices/usersApiSlice";
+
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -26,11 +28,16 @@ const Header = () => {
       </div>
       <ul>
         {userInfo ? (
-          <li>
-            <Link to="/login" onClick={logoutHandler}>
-              Logout
-            </Link>
-          </li>
+          <>
+            <li>
+              <Link to="/create">Create One</Link>
+            </li>
+            <li>
+              <Link to="/login" onClick={logoutHandler}>
+                <FaUser className="fa-user-icon" /> Logout
+              </Link>
+            </li>
+          </>
         ) : (
           <>
             <li>
