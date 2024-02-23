@@ -39,11 +39,15 @@ const CreateBlogPage = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log({
-      postTitle,
-      postContent,
-      postSummary,
-      files,
+    const data = new FormData();
+    data.set("postTitle", postTitle);
+    data.set("postSummary", postSummary);
+    data.set("postContent", postContent);
+    data.set("file", files[0]);
+
+    fetch("http://localhost:5000/api/posts/create", {
+      method: "POST",
+      body: data,
     });
   };
 
@@ -63,8 +67,7 @@ const CreateBlogPage = () => {
       />
       <input
         type="file"
-        name=""
-        value={files}
+        name="files"
         onChange={(e) => setFiles(e.target.files)}
         id=""
       />

@@ -1,5 +1,6 @@
 const express = require("express");
 const routes = require("./routes/userRoutes");
+const postRoutes = require("./routes/blogPostRoutes");
 const connectDB = require("./config/db");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
@@ -13,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use("/api/users/", routes);
+app.use("/api/posts/", postRoutes);
 
 app.listen(PORT, () => console.log("listening on port", PORT));
 connectDB();
