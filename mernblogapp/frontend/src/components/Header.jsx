@@ -1,4 +1,4 @@
-import { FaPlus, FaUser } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../slices/authSlice";
@@ -34,11 +34,7 @@ const Header = () => {
                 <FaPlus /> New Post
               </Link>
             </li>
-            <li>
-              <Link to="/user/profile">
-                <FaUser className="fa-user-icon" /> Hi {userInfo.name}
-              </Link>
-            </li>
+
             <li>
               <Link to="/login" onClick={logoutHandler}>
                 Logout

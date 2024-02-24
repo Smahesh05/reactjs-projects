@@ -15,6 +15,6 @@ routes.get("/getposts", getAllBlogPosts);
 routes.post("/create", protect, uploadMiddleware.single("file"), addBlogPost);
 routes.get("/:id", getPostDetails);
 routes.put("/:id", protect, uploadMiddleware.single("file"), updateBlogPost);
-routes.get("/:id", protect, getMyBlogs);
+routes.get("/", protect, getMyBlogs);
 
 module.exports = routes;

@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/create" element={<CreateBlogPage />} />
           <Route path="/post/:id" element={<PostDetailsPage />} />
           <Route path="/edit/:id" element={<EditBlogPage />} />
-          <Route path="/user/:id" element={<UserProfile />} />
+          <Route path="/user" element={<UserProfile />} />
         </Routes>
       </main>
     </div>

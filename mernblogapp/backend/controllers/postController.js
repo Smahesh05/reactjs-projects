@@ -61,7 +61,8 @@ const updateBlogPost = async (req, res) => {
 };
 
 const getMyBlogs = async (req, res) => {
-  res.status(200).json({ meaage: "my blog" });
+  const posts = await PostModel.find({ author: req.user.id });
+  res.status(200).json(posts);
 };
 
 module.exports = {
