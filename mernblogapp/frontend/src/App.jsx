@@ -6,6 +6,7 @@ import RegisterPage from "./pages/RegisterPage";
 import "./App.css";
 
 import Header from "./components/Header";
+import PrivateRoute from "./components/PrivateRoute";
 import CreateBlogPage from "./pages/CreateBlogPage";
 import EditBlogPage from "./pages/EditBlogPage";
 import PostDetailsPage from "./pages/PostDetailsPage";
@@ -21,10 +22,12 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route path="/create" element={<CreateBlogPage />} />
           <Route path="/post/:id" element={<PostDetailsPage />} />
-          <Route path="/edit/:id" element={<EditBlogPage />} />
-          <Route path="/user" element={<UserProfile />} />
+          <Route path="" element={<PrivateRoute />}>
+            <Route path="/create" element={<CreateBlogPage />} />
+            <Route path="/edit/:id" element={<EditBlogPage />} />
+            <Route path="/user" element={<UserProfile />} />
+          </Route>
         </Routes>
       </main>
     </div>

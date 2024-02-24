@@ -10,11 +10,15 @@ const PostDetailsPage = () => {
 
   const { userInfo } = useSelector((state) => state.auth);
 
+  const getPostDetails = async () => {
+    const res = await fetch(`http://localhost:5000/api/posts/${id}`);
+    const data = await res.json();
+    setPostInfo(data);
+  };
+
   useEffect(() => {
-    fetch(`http://localhost:5000/api/posts/${id}`)
-      .then((res) => res.json())
-      .then((data) => setPostInfo(data));
-  }, [id]);
+    getPostDetails();
+  }, []);
 
   if (postInfo === null) {
     return <div>Loading...</div>;
@@ -25,13 +29,14 @@ const PostDetailsPage = () => {
       <h1>{postInfo.postTitle}</h1>
       <time>{formatISO9075(new Date(postInfo.createdAt))}</time>
       <div className="author">By {postInfo.author.name}</div>
-      {userInfo._id === postInfo.author._id && (
-        <div className="edit-blog">
-          <Link to={`/edit/${postInfo._id}`} className="edit-btn">
-            <FaEdit /> Edit this post
-          </Link>
-        </div>
-      )}
+      {userInfo &&
+        userInfo._id === (postInfo.author && postInfo.author._id) && (
+          <div className="edit-blog">
+            <Link to={`/edit/${postInfo._id}`} className="edit-btn">
+              <FaEdit /> Edit this post
+            </Link>
+          </div>
+        )}
       <div className="image">
         <img src={postInfo.cover} alt="" />
       </div>
