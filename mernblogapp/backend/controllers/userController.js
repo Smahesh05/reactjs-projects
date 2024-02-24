@@ -62,14 +62,10 @@ const logoutUser = (req, res) => {
   res.status(200).json({ message: "Logged out successfully" });
 };
 
-const getMe = async (req, res) => {
-  res.status(200).json(req.user);
-};
-
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: "30d",
   });
 };
 
-module.exports = { registerUser, loginUser, getMe, logoutUser };
+module.exports = { registerUser, loginUser, logoutUser };

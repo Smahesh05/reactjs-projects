@@ -20,7 +20,7 @@ const LoginPage = () => {
       dispatch(setCredentials({ ...res }));
       navigate("/");
     } catch (err) {
-      console.log(err?.data?.message || err.error);
+      alert(err?.data?.message || err.error);
     }
   };
   return (

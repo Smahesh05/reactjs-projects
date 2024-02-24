@@ -8,6 +8,12 @@ const getAllBlogPosts = async (req, res) => {
   res.json(posts);
 };
 
+const getPostDetails = async (req, res) => {
+  const { id } = req.params;
+  const postDetail = await PostModel.findById(id).populate("author", ["name"]);
+  res.json(postDetail);
+};
+
 const addBlogPost = async (req, res) => {
   try {
     const { postTitle, postSummary, postContent } = req.body;
@@ -28,4 +34,40 @@ const addBlogPost = async (req, res) => {
   }
 };
 
-module.exports = { getAllBlogPosts, addBlogPost };
+// edit blog post
+const updateBlogPost = async (req, res) => {
+  const { id } = req.params;
+  const post = await PostModel.findById(id);
+
+  if (!post) {
+    res.status(404);
+    throw new Error("Blog post not found");
+  }
+
+  if (!req.user) {
+    res.status(404);
+    throw new Error("Author not found");
+  }
+
+  if (post.author.toString() !== req.user.id) {
+    res.status(401);
+    throw new Error("User not authorized");
+  }
+
+  const updatedPost = await PostModel.findByIdAndUpdate(id, req.body, {
+    new: true,
+  });
+  res.status(200).json(updatedPost);
+};
+
+const getMyBlogs = async (req, res) => {
+  res.status(200).json({ meaage: "my blog" });
+};
+
+module.exports = {
+  getAllBlogPosts,
+  addBlogPost,
+  getPostDetails,
+  updateBlogPost,
+  getMyBlogs,
+};

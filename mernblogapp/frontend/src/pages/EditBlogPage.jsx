@@ -1,8 +1,7 @@
 import axios from "axios";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Editor from "../components/Editor";
 
 const CreateBlogPage = () => {
@@ -11,39 +10,50 @@ const CreateBlogPage = () => {
   const [postContent, setPostContent] = useState("");
   const [files, setFiles] = useState("");
 
+  const { id } = useParams();
+
   const navigate = useNavigate();
 
   const { userInfo } = useSelector((state) => state.auth);
 
-  const submitHandler = async (e) => {
+  useEffect(() => {
+    fetch(`http://localhost:5000/api/posts/${id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setPostTitle(data.postTitle);
+        setPostSUmmary(data.postSummary);
+        setPostContent(data.postContent);
+      });
+  }, [id]);
+
+  const updatePostHandler = async (e) => {
     e.preventDefault();
     const data = new FormData();
     data.set("postTitle", postTitle);
     data.set("postSummary", postSummary);
     data.set("postContent", postContent);
-    data.set("file", files[0]);
 
-    const res = await axios.post(
-      "http://localhost:5000/api/posts/create",
-      data,
-      {
+    if (files?.[0]) {
+      data.set("files", files?.[0]);
+    }
+
+    try {
+      await axios.put(`http://localhost:5000/api/posts/${id}`, data, {
         headers: {
           Authorization: "Bearer " + userInfo.token,
         },
-      }
-    );
-
-    if (res.ok) {
-      navigate("/");
+      });
+      setPostTitle("");
+      setPostSUmmary("");
+      setPostContent("");
+      navigate("/post/" + id);
+    } catch (error) {
+      console.log(error?.data?.message || error.message);
     }
-
-    setPostTitle("");
-    setPostSUmmary("");
-    setPostContent("");
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={updatePostHandler}>
       <input
         type="text"
         placeholder="Title"
@@ -60,10 +70,10 @@ const CreateBlogPage = () => {
         type="file"
         name="files"
         onChange={(e) => setFiles(e.target.files)}
-        id=""
+        id="file"
       />
       <Editor onChange={setPostContent} value={postContent} />
-      <button style={{ marginTop: "5px" }}>Create Post</button>
+      <button style={{ marginTop: "5px" }}>Update Blog Post</button>
     </form>
   );
 };

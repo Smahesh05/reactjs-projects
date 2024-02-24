@@ -7,7 +7,9 @@ import "./App.css";
 
 import Header from "./components/Header";
 import CreateBlogPage from "./pages/CreateBlogPage";
+import EditBlogPage from "./pages/EditBlogPage";
 import PostDetailsPage from "./pages/PostDetailsPage";
+import UserProfile from "./pages/UserProfile";
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/create" element={<CreateBlogPage />} />
           <Route path="/post/:id" element={<PostDetailsPage />} />
+          <Route path="/edit/:id" element={<EditBlogPage />} />
+          <Route path="/user/:id" element={<UserProfile />} />
         </Routes>
       </main>
     </div>
