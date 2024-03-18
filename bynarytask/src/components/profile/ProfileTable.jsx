@@ -23,11 +23,7 @@ const ProfileTable = ({ onDelete, profiles, onEdit }) => {
                   View
                 </Button>
               </Link>
-              <Button
-                size="sm"
-                variant="info"
-                onClick={() => onEdit(profile.id)}
-              >
+              <Button size="sm" variant="info" onClick={() => onEdit(profile)}>
                 Edit
               </Button>
               <Button

@@ -1,29 +1,16 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Form, Modal } from "react-bootstrap";
 
 const EditProfileForm = ({ profile, onUpdate, showModal, onClose }) => {
   const [formData, setFormData] = useState({
-    name: "",
-    contact: "",
-    description: "",
-    location: "",
-    photo: "",
-    interests: [],
+    name: profile.name,
+    contact: profile.contact,
+    description: profile.description,
+    location: profile.location,
+    photo: profile.photo,
+    interests: profile.interests,
   });
-
-  useEffect(() => {
-    if (profile) {
-      setFormData({
-        name: profile.name || "",
-        contact: profile.contact || "",
-        description: profile.description || "",
-        location: profile.location || "",
-        photo: profile.photo || "",
-        interests: profile.interests || [],
-      });
-    }
-  }, [profile]);
 
   console.log(profile);
 
