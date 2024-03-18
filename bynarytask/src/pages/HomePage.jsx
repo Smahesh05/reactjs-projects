@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import LeafletMap from "../components/LeafletMap";
 import SearchBar from "../components/SearchBar";
 import UserProfileItem from "../components/profile/UserProfileItem";
-import PROFILES from "../utils/profiles.json";
+import { ProfileContext } from "../utils/profile-context";
 
 const HomePage = () => {
   const [selectedProfile, setSelectedProfile] = useState(null);
@@ -11,7 +11,9 @@ const HomePage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [locationFilter, setLocationFilter] = useState("");
 
-  const filteredProfiles = PROFILES.filter((profile) => {
+  const { profiles } = useContext(ProfileContext);
+
+  const filteredProfiles = profiles.filter((profile) => {
     const matchName = profile.name
       .toLowerCase()
       .includes(searchQuery.toLowerCase());

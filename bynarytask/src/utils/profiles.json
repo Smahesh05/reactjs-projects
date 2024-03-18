@@ -27,6 +27,15 @@
       "photo":"https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?cs=srgb&dl=pexels-justin-shaifer-1222271.jpg&fm=jpg&_gl=1*1dn1mjs*_ga*MjA3NTc5MzgxMS4xNzEwNTcxNzY4*_ga_8JE65Q40S6*MTcxMDU3MTc2Ny4xLjEuMTcxMDU3MTgxMS4wLjAuMA..",
       "description":"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
       "location":"Pune, India"
+    },
+    {
+      "id":4,
+      "name":"john Dev",
+      "contact":"134567890",
+     "interests": ["Hiking", "Photography", "Cooking"],
+      "photo":"https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?cs=srgb&dl=pexels-justin-shaifer-1222271.jpg&fm=jpg&_gl=1*1dn1mjs*_ga*MjA3NTc5MzgxMS4xNzEwNTcxNzY4*_ga_8JE65Q40S6*MTcxMDU3MTc2Ny4xLjEuMTcxMDU3MTgxMS4wLjAuMA..",
+      "description":"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "location":"Pune, India"
     }
   ]
   

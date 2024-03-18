@@ -1,20 +1,26 @@
+import { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import PROFILES from "../utils/profiles.json";
+import { ProfileContext } from "../utils/profile-context";
 
 const ProfilePage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { profiles } = useContext(ProfileContext);
 
-  const findProfile = PROFILES.find((profile) => profile.id == id);
+  const findProfile = profiles.find((profile) => profile.id === parseInt(id));
 
   function goBack() {
     navigate(-1);
   }
 
+  if (!findProfile) {
+    return <p>Profile not found</p>;
+  }
+
   return (
     <>
       <p className="back-btn" onClick={goBack}>
-        back
+        Back
       </p>
       <div className="profile-details-container">
         <div className="profile-photo">

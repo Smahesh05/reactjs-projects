@@ -2,7 +2,7 @@
 import { Button, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const ProfileTable = ({ onDelete, profiles }) => {
+const ProfileTable = ({ onDelete, profiles, onEdit }) => {
   return (
     <Table striped bordered hover>
       <thead>
@@ -23,7 +23,11 @@ const ProfileTable = ({ onDelete, profiles }) => {
                   View
                 </Button>
               </Link>
-              <Button size="sm" variant="info">
+              <Button
+                size="sm"
+                variant="info"
+                onClick={() => onEdit(profile.id)}
+              >
                 Edit
               </Button>
               <Button
