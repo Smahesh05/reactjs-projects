@@ -5,6 +5,11 @@ import Card from "../UIElements/Card";
 const DeleteForm = () => {
   const [inputField, setInputField] = useState("");
 
+  const deleteByInviteHandler = (e) => {
+    e.preventDefault();
+    setInputField("");
+  };
+
   return (
     <Card>
       <h4 className="font-bold">Delete information from specific invitees</h4>
@@ -23,7 +28,7 @@ const DeleteForm = () => {
           value={inputField}
           onChange={(e) => setInputField(e.target.value)}
         ></textarea>
-        <Button>Delete</Button>
+        <Button onClick={deleteByInviteHandler}>Delete</Button>
       </div>
     </Card>
   );
