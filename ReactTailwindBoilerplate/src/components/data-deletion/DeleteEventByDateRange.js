@@ -9,6 +9,7 @@ const DeleteEventByDateRange = () => {
     e.preventDefault();
     setInputField("");
   };
+
   return (
     <Card>
       <h4 className="font-bold ">Delete information within period of time</h4>
