@@ -34,7 +34,10 @@ const Header = () => {
               <IoMdArrowDropdown className="focus:outline-none hover:bg-gray-300 " />
             </button>
           </li>
-          <li className="cursor-pointer mb-4 md:mb-0">
+          <li className="cursor-pointer flex gap-2 items-center mb-4 md:mb-0">
+            <div className="w-8 h-8 border-2 border-gray-400 bg-gray-300 rounded-full flex items-center justify-center">
+              <span>J</span>
+            </div>
             <button className="flex items-center gap-2">
               Account
               <IoMdArrowDropdown className="focus:outline-none hover:bg-gray-300 " />

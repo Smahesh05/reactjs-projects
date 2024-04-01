@@ -2,7 +2,7 @@ import React from "react";
 
 const DeleteInfo = () => {
   return (
-    <div className="border-b border-gray-300 py-8 ">
+    <div className="border-b border-gray-300 pb-8 ">
       <div>
         <h2 className="font-bold">Delete Info from your organizaion</h2>
         <p className="py-2">

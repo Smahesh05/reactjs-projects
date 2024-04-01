@@ -1,8 +1,9 @@
 import React from "react";
+import Card from "../UIElements/Card";
 
 const AccountDeletionMessage = () => {
   return (
-    <div className="py-8 border-b border-gray-300">
+    <Card>
       <h2 className="font-bold  text-sm">Delete your account</h2>
       <p>
         You can delete your account from your{" "}
@@ -10,7 +11,7 @@ const AccountDeletionMessage = () => {
           account settings
         </a>
       </p>
-    </div>
+    </Card>
   );
 };
 

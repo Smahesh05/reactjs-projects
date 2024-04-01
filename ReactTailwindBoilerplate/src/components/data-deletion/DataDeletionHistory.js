@@ -1,10 +1,11 @@
 import React from "react";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
+import Card from "../UIElements/Card";
 
 const DataDeletionHistory = () => {
   return (
-    <div className=" py-8 border-b border-gray-300">
-      <h2 className="text-xl font-bold mb-4">Data Deletion History</h2>
+    <Card>
+      <h2 className="text-sm font-bold mb-4">Data Deletion History</h2>
       <table className="min-w-full divide-y divide-gray-200 shadow">
         <thead className="border rounded">
           <tr className="flex justify-between">
@@ -32,7 +33,7 @@ const DataDeletionHistory = () => {
           </tr>
         </thead>
       </table>
-    </div>
+    </Card>
   );
 };
 
