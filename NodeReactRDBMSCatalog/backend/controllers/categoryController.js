@@ -41,7 +41,7 @@ const updateCategory = async (req, res) => {
     const { categoryName } = req.body;
 
     const data = await db.query(
-      `UPDATE categories SET categoryName = ? where categoryId = ?`,
+      `UPDATE categories SET categoryName = ? WHERE categoryId = ?`,
       [categoryName]
     );
 

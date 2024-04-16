@@ -2,13 +2,26 @@ const db = require("../config/db");
 
 const getProducts = async (req, res) => {
   try {
-    const data = await db.query(`SELECT * from products;`);
-    res.status(202).json({ data: data[0] });
-  } catch (err) {
-    res.status(500).json({
-      message: "error",
-      err,
-    });
+    const [products] = await db.query(
+      `
+      SELECT
+        p.productId,
+        p.productName,
+        p.categoryId,
+        c.categoryName
+      FROM
+        products p
+      JOIN
+        categories c ON p.categoryId = c.categoryId
+      `
+    );
+
+    res.status(200).json({ success: true, data: products });
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    res
+      .status(500)
+      .json({ success: false, message: "Error fetching products" });
   }
 };
 
@@ -46,13 +59,78 @@ const createProduct = async (req, res) => {
 };
 
 const updateProduct = async (req, res) => {
-  await res.send({ message: "Hello from get category" });
+  try {
+    const { id: productId } = req.params;
+
+    if (!productId) {
+      return res
+        .status(404)
+        .send({ success: false, message: "Invalid product Id" });
+    }
+
+    const { productName } = req.body;
+
+    const [[product]] = await db.query(
+      `SELECT * FROM products WHERE productId = ?`,
+      [productId]
+    );
+
+    if (!product) {
+      return res
+        .status(500)
+        .send({ success: false, message: "Error in update data" });
+    }
+
+    const [{ affectedRows }] = await db.query(
+      `UPDATE products SET productName = ? WHERE productId = ?`,
+      [productName, productId]
+    );
+
+    if (affectedRows === 0) {
+      return res
+        .status(500)
+        .json({ success: false, message: "Error updating product" });
+    }
+
+    res.status(200).send({
+      success: true,
+      message: "product updated successfully",
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      message: "Error updating product",
+    });
+  }
 };
 
 const deleteProduct = async (req, res) => {
-  await res.send({ message: "Hello from get category" });
-};
+  try {
+    const { id: productId } = req.params;
 
+    if (!productId) {
+      return res.status(404).send({
+        success: false,
+        message: "product not found",
+      });
+    }
+
+    await db.query(`DELETE FROM products WHERE productId = ?`, [productId]);
+
+    res.status(200).send({
+      success: true,
+      message: "product deleted",
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      message: "Error deleting product",
+      error,
+    });
+  }
+};
 module.exports = {
   createProduct,
   getProducts,
