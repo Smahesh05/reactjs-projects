@@ -13,6 +13,7 @@ const ProductList = () => {
     const response = await axios.delete(
       `http://localhost:5000/api/products/${productId}`
     );
+    setProducts(products.filter((product) => product.productId !== productId));
     console.log(response.data);
   };
 
@@ -55,7 +56,7 @@ const ProductList = () => {
   return (
     <div>
       <Container>
-        <ul>
+        <ul className="d-flex flex-wrap p-2 gap-2">
           {products.map((product) => (
             <ProductItem
               product={product}

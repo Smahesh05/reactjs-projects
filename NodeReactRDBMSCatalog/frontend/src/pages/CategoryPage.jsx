@@ -1,20 +1,38 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import CategoryForm from "../components/category/CategoryForm";
 import CategoryList from "../components/category/CategoryList";
 
 const CategoryPage = () => {
+  const [categories, setCategories] = useState([]);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:5000/api/categories"
+        );
+        setCategories(response.data.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
 
   const handleDeleteCategory = async (categoryId) => {
     try {
       const response = await axios.delete(
         `http://localhost:5000/api/categories/${categoryId}`
       );
+
+      setCategories(categories.filter((c) => c.productId !== categoryId));
       console.log(response.data);
     } catch (error) {
       console.log(error.message);
@@ -58,6 +76,7 @@ const CategoryPage = () => {
       </Modal>
 
       <CategoryList
+        categories={categories}
         onUpdate={handleUpdateCategory}
         onDelete={handleDeleteCategory}
       />

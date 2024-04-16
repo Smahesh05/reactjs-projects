@@ -3,12 +3,16 @@ import { Button } from "react-bootstrap";
 
 const ProductItem = ({ product, onDelete, onUpdate }) => {
   return (
-    <li>
+    <li className="border p-2 rounded">
       <h3>{product.productName}</h3>
       <p>{product.categoryName}</p>
-      <div>
-        <Button onClick={() => onDelete(product.productId)}>Delete</Button>
-        <Button onClick={() => onUpdate(product.productId)}>Update</Button>
+      <div className="d-flex gap-2">
+        <Button size="sm" onClick={() => onDelete(product.productId)}>
+          Delete
+        </Button>
+        <Button size="sm" onClick={() => onUpdate(product.productId)}>
+          Update
+        </Button>
       </div>
     </li>
   );

@@ -1,26 +1,8 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container, Pagination } from "react-bootstrap";
 import CategoryItem from "./CategoryItem";
 
-const CategoryList = ({ onDelete, onUpdate }) => {
-  const [categories, setCategories] = useState([]);
-
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:5000/api/categories"
-        );
-        setCategories(response.data.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchCategories();
-  }, []);
-
+const CategoryList = ({ categories, onDelete, onUpdate }) => {
   return (
     <div>
       <Container>
