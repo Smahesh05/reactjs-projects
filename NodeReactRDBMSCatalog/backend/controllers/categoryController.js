@@ -31,35 +31,47 @@ const createCategory = async (req, res) => {
 
 const updateCategory = async (req, res) => {
   try {
-    const categoryId = req.params.id;
+    const { id: categoryId } = req.params;
+
     if (!categoryId) {
       return res
         .status(404)
-        .send({ success: false, message: "Invalid category Id" });
+        .send({ success: false, message: "Invalid Category Id" });
     }
 
     const { categoryName } = req.body;
 
-    const data = await db.query(
-      `UPDATE categories SET categoryName = ? WHERE categoryId = ?`,
-      [categoryName]
+    const [[category]] = await db.query(
+      `SELECT * FROM categories WHERE categoryId = ?`,
+      [categoryId]
     );
 
-    if (!data) {
+    if (!category) {
       return res
         .status(500)
         .send({ success: false, message: "Error in update data" });
     }
 
+    const [{ affectedRows }] = await db.query(
+      `UPDATE categories SET categoryName = ? WHERE categoryId = ?`,
+      [categoryName, categoryId]
+    );
+
+    if (affectedRows === 0) {
+      return res
+        .status(500)
+        .json({ success: false, message: "Error updating category" });
+    }
+
     res.status(200).send({
       success: true,
-      message: "data updated successfully",
+      message: "category updated successfully",
     });
   } catch (error) {
     console.log(error);
     res.status(500).send({
       success: false,
-      message: "Error updating category",
+      message: "Error updating product",
     });
   }
 };

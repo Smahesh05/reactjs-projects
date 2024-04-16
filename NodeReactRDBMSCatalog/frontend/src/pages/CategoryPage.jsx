@@ -32,7 +32,7 @@ const CategoryPage = () => {
         `http://localhost:5000/api/categories/${categoryId}`
       );
 
-      setCategories(categories.filter((c) => c.productId !== categoryId));
+      setCategories((cate) => cate.filter((c) => c.productId !== categoryId));
       console.log(response.data);
     } catch (error) {
       console.log(error.message);
@@ -60,19 +60,11 @@ const CategoryPage = () => {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Add Category</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <CategoryForm onClose={handleClose} />
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
       </Modal>
 
       <CategoryList
