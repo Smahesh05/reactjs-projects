@@ -1,43 +1,41 @@
-import React, { useEffect } from "react";
-import { Button } from "react-bootstrap";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Container, Pagination } from "react-bootstrap";
+import CategoryItem from "./CategoryItem";
 
-const initialCategories = [
-  { category_id: 1, category_name: "Electronics" },
-  { category_id: 2, category_name: "Clothing" },
-  { category_id: 3, category_name: "Books" },
-];
-
-const CategoryList = () => {
+const CategoryList = ({ onDelete, onUpdate }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    setCategories(initialCategories);
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:5000/api/categories"
+        );
+        setCategories(response.data.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchCategories();
   }, []);
-
-  const handleDeleteCategory = (category) => {
-    console.log(`Deleting category with ID ${category}`);
-  };
-
-  const handleUpdateCategory = (category) => {
-    console.log(`updating category with ID ${category}`);
-  };
 
   return (
     <div>
-      <h2>Category List</h2>
-      <ul>
-        {categories.map((category) => (
-          <li key={category.category_id}>
-            {category.category_name}
-            <Button onClick={() => handleDeleteCategory(category.category_id)}>
-              Delete
-            </Button>
-            <Button
-              onClick={() => handleUpdateCategory(category.category_id)}
-            ></Button>
-          </li>
-        ))}
-      </ul>
+      <Container>
+        <ul className="d-flex flex-wrap p-2 gap-2">
+          {categories.map((category) => (
+            <CategoryItem
+              category={category}
+              key={category.categoryId}
+              onDelete={onDelete}
+              onUpdate={onUpdate}
+            />
+          ))}
+        </ul>
+        <Pagination size="sm">1</Pagination>
+      </Container>
     </div>
   );
 };

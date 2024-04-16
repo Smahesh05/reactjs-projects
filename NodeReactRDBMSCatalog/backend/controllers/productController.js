@@ -2,6 +2,10 @@ const db = require("../config/db");
 
 const getProducts = async (req, res) => {
   try {
+    const page = req.query.page || 1;
+    const pageSize = req.query.pageSize || 10;
+    const offset = (page - 1) * pageSize;
+
     const [products] = await db.query(
       `
       SELECT
@@ -13,10 +17,17 @@ const getProducts = async (req, res) => {
         products p
       JOIN
         categories c ON p.categoryId = c.categoryId
-      `
+      `,
+      [offset, parseInt(pageSize)]
     );
 
-    res.status(200).json({ success: true, data: products });
+    const [[{ totalCount }]] = await db.query(`
+      SELECT COUNT(*) AS totalCount FROM products
+    `);
+
+    const totalPages = Math.ceil(totalCount / pageSize);
+
+    res.status(200).json({ success: true, data: products, totalPages });
   } catch (error) {
     console.error("Error fetching products:", error);
     res

@@ -1,58 +1,88 @@
-import React, { useEffect } from "react";
-import { Button } from "react-bootstrap";
-
-const initialProducts = [
-  { product_id: 1, product_name: "Laptop", category_id: 1 },
-  { product_id: 2, product_name: "T-Shirt", category_id: 2 },
-  { product_id: 3, product_name: "Smartphone", category_id: 1 },
-];
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Button, ButtonGroup, Container } from "react-bootstrap";
+import ProductItem from "./ProductItem";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const pageSize = 10;
 
-  useEffect(() => {
-    setProducts(initialProducts);
-  });
-
-  const handleProductDelete = (productId) => {
-    console.log(productId);
+  const handleProductDelete = async (productId) => {
+    const response = await axios.delete(
+      `http://localhost:5000/api/products/${productId}`
+    );
+    console.log(response.data);
   };
 
-  const handleProductUpdate = (productId) => {
-    console.log(productId);
+  const handleProductUpdate = async (productId, updatedData) => {
+    const response = await axios.delete(
+      `http://localhost:5000/api/products/${productId}`,
+      updatedData
+    );
+    console.log(response.data);
+  };
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:5000/api/products?page=${currentPage}&pageSize=${pageSize}`
+        );
+        setProducts(response.data.data);
+        setTotalPages(response.data.totalPages);
+      } catch (error) {
+        console.error("error fatching products", error);
+      }
+    };
+
+    fetchCategories();
+  }, [currentPage]);
+
+  const handlePreviousPage = () => {
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
+  };
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
   return (
     <div>
-      <h2>Product List</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Product ID</th>
-            <th>Product Name</th>
-            <th>Category ID</th>
-            <th>Category Name</th>
-          </tr>
-        </thead>
-        <tbody>
+      <Container>
+        <ul>
           {products.map((product) => (
-            <tr key={product.product_id}>
-              <td>{product.product_id}</td>
-              <td>{product.product_name}</td>
-              <td>{product.category_id}</td>
-              <td>{product.category_name}</td>
-              <td>
-                <Button onClick={() => handleProductDelete(product.product_id)}>
-                  Delete
-                </Button>
-                <Button onClick={() => handleProductUpdate(product.product_id)}>
-                  Update
-                </Button>
-              </td>
-            </tr>
+            <ProductItem
+              product={product}
+              key={product.productId}
+              onDelete={handleProductDelete}
+              onUpdate={handleProductUpdate}
+            />
           ))}
-        </tbody>
-      </table>
+        </ul>
+
+        <ButtonGroup aria-label="Pagination" className="text-center">
+          <Button onClick={handlePreviousPage} disabled={currentPage === 1}>
+            Prev
+          </Button>
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <Button key={page} onClick={() => handlePageChange(page)}>
+              {page}
+            </Button>
+          ))}
+          <Button
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </Button>
+        </ButtonGroup>
+      </Container>
     </div>
   );
 };
