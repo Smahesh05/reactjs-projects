@@ -58,6 +58,7 @@ const createProduct = async (req, res) => {
       productId,
       productName,
       categoryName: category.categoryName,
+      categoryId: category.categoryId,
     };
 
     res

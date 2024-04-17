@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Pagination } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import CategoryItem from "./CategoryItem";
 
 const CategoryList = ({ categories, onDelete, onUpdate }) => {
@@ -16,7 +16,6 @@ const CategoryList = ({ categories, onDelete, onUpdate }) => {
             />
           ))}
         </ul>
-        <Pagination size="sm">1</Pagination>
       </Container>
     </div>
   );

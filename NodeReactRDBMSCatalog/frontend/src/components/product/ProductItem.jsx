@@ -24,7 +24,7 @@ const ProductItem = ({ product, onDelete, onUpdate }) => {
   return (
     <li className="border p-2 rounded">
       <h3>{product.productName}</h3>
-      <p>{product.categoryName}</p>
+      <p className="fw-semibold">Category : {product.categoryName}</p>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
