@@ -9,7 +9,7 @@ import "./Navbar.css";
 function Navbar() {
   const user = null;
   return (
-    <nav>
+    <nav className="main-nav">
       <div className="navbar">
         <Link to="/" className="nav-btn nav-logo">
           <img src={logo} alt="Logo" />
