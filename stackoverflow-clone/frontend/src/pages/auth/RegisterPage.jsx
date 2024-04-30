@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { useRegisterMutation } from "../../slices/userApiSlice";
 import "./Auth.css";
 
 function RegisterPage() {
@@ -7,16 +9,30 @@ function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const submitHandler = (e) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [register, { isLoading }] = useRegisterMutation();
+
+  const { userInfo } = useSelector((state) => state.auth);
+
+  // useEffect(() => {
+  //   if (userInfo) {
+  //     navigate("/");
+  //   }
+  // }, [navigate, userInfo]);
+
+  const submitHandler = async (e) => {
     e.preventDefault();
-    const data = {
-      name,
-      email,
-      password,
-    };
-    console.log(data);
-    setEmail("");
-    setPassword("");
+
+    try {
+      const res = await register({ name, email, password }).unwrap();
+      dispatch(setCredentials({ ...res }));
+
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <section className="auth-section">
