@@ -6,6 +6,7 @@ import MainLayout from "./pages/MainLayout";
 import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
 import AskQuestionPage from "./pages/questions/AskQuestionPage";
+import DisplayQuestionPage from "./pages/questions/DisplayQuestionPage";
 import QuestionsPage from "./pages/questions/QuestionsPage";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/questions" element={<QuestionsPage />} />
         <Route path="/askquestion" element={<AskQuestionPage />} />
+        <Route path="/questions/:id" element={<DisplayQuestionPage />} />
       </Routes>
     </div>
   );

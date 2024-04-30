@@ -1,0 +1,25 @@
+[
+  {
+    "_id": "1",
+    "upVotes": 3,
+    "downVotes": 2,
+    "votes": 3,
+    "noOfAnswers": 3,
+    "questionTitle": "what is function",
+    "questionBody": "It means to be like a function",
+    "questionTags": ["javascript", "React", "Java", "Node.js"],
+    "userPosted": "mano",
+    "userId": 1,
+
+    "askedOn": "jan 1",
+    "answer": [
+      {
+        "_id": "1",
+        "answerBody": "Answer",
+        "userAnswered": "Kumar",
+        "answeredOn": "jan 1",
+        "userId": 2
+      }
+    ]
+  }
+]

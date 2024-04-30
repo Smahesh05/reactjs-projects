@@ -13,7 +13,7 @@ const QuestionItem = ({ question }) => {
         <p>{question.noOfAnswers === 1 ? "answer" : "answers"}</p>
       </div>
       <div className="display-question-details">
-        <Link to={`/questions/${question.id}`} className="question-title-link">
+        <Link to={`/questions/${question._id}`} className="question-title-link">
           {question.questionTitle}
         </Link>
         <div className="display-tags-time">

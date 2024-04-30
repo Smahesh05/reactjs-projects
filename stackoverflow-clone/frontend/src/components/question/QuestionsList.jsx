@@ -1,11 +1,11 @@
 import React from "react";
 import QuestionItem from "./QuestionItem";
 
-const QuestionsList = ({ questionsList }) => {
+const QuestionsList = ({ QUESTIONLIST }) => {
   return (
     <>
-      {questionsList.map((question) => (
-        <QuestionItem question={question} key={question.id} />
+      {QUESTIONLIST.map((question) => (
+        <QuestionItem question={question} key={question._id} />
       ))}
     </>
   );

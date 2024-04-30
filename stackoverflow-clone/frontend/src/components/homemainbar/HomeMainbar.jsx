@@ -1,20 +1,8 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import QUESTIONLIST from "../../QUESTIONLIST.json";
 import QuestionsList from "../question/QuestionsList";
 import "./HomeMainbar.css";
-
-const questionsList = [
-  {
-    id: 1,
-    votes: 3,
-    noOfAnswers: 3,
-    questionTitle: "what is function",
-    questionBody: "It means to be like a function",
-    questionTags: ["javascript", "React", "Java", "Node.js"],
-    userPosted: "mano",
-    askedOn: "jan 1",
-  },
-];
 
 const HomeMainbar = () => {
   const location = useLocation();
@@ -32,11 +20,11 @@ const HomeMainbar = () => {
         </Link>
       </div>
       <div className="">
-        {questionsList === null ? (
+        {QUESTIONLIST === null ? (
           <h3>Loading....</h3>
         ) : (
           <>
-            <QuestionsList questionsList={questionsList} />
+            <QuestionsList QUESTIONLIST={QUESTIONLIST} />
           </>
         )}
       </div>
