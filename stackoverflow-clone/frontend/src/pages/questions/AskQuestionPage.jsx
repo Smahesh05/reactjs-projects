@@ -41,6 +41,11 @@ const AskQuestionPage = () => {
                 onChange={(e) => {
                   setQuestionBody(e.target.value);
                 }}
+                onKeyDown={(e) =>
+                  e.key === "Enter"
+                    ? setQuestionBody(questionBody + "\n")
+                    : null
+                }
               ></textarea>
             </label>
             <label htmlFor="ask-ques-tags">

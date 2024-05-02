@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { setCredentials } from "../../slices/authSlice";
 import { useRegisterMutation } from "../../slices/userApiSlice";
 import "./Auth.css";
 
@@ -16,11 +17,11 @@ function RegisterPage() {
 
   const { userInfo } = useSelector((state) => state.auth);
 
-  // useEffect(() => {
-  //   if (userInfo) {
-  //     navigate("/");
-  //   }
-  // }, [navigate, userInfo]);
+  useEffect(() => {
+    if (userInfo) {
+      navigate("/");
+    }
+  }, [navigate, userInfo]);
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -30,6 +31,7 @@ function RegisterPage() {
       dispatch(setCredentials({ ...res }));
 
       navigate("/");
+      console.log(userInfo);
     } catch (error) {
       console.log(error);
     }

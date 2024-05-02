@@ -1,13 +1,33 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import Avatar from "./UIElements/Avatar";
 
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../slices/authSlice";
+import { useLogoutMutation } from "../slices/userApiSlice";
 import "./Navbar.css";
 
 function Navbar() {
-  const user = null;
+  const { userInfo } = useSelector((state) => state.auth);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [logoutApiCall] = useLogoutMutation();
+
+  const logoutHandler = async () => {
+    try {
+      await logoutApiCall().unwrap();
+      dispatch(logout());
+      navigate("/auth");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const user = userInfo;
   return (
     <nav className="main-nav">
       <div className="navbar">
@@ -41,12 +61,11 @@ function Navbar() {
               borderRadius="50%"
               color="white"
             >
-              <Link to="/users">User.result.name.charAt0.toUpperCase</Link>
+              <Link to={`/users/${user?.result?._id}`}>
+                {user.result.name.charAt(0).toUpperCase()}
+              </Link>
             </Avatar>
-            <button
-              className="nav-item nav-links"
-              //  onClick={handleLogout}
-            >
+            <button className="nav-item nav-links" onClick={logoutHandler}>
               Log out
             </button>
           </>
