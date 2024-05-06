@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { CgClose } from "react-icons/cg";
-import { FaHamburger } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(false);
   return (
     <>
       <nav>
@@ -13,41 +14,41 @@ const Navbar = () => {
 
         <ul>
           <li>
-            <a href="#">About</a>
+            <a href="#topics">About</a>
           </li>
           <li>
-            <a href="#">Course Details</a>
+            <a href="#info">Course Details</a>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a href="#blog">Blog</a>
           </li>
           <li>
-            <a href="#">Testimonials</a>
+            <a href="#testimonials">Testimonials</a>
           </li>
         </ul>
 
-        <div className="menu-icon">
-          <FaHamburger />
+        <div className="menu-icon" onClick={() => setIsActive(true)}>
+          <GiHamburgerMenu />
         </div>
       </nav>
 
-      <div className="mobile-menu-container">
-        <div className="close-btn">
+      <div className={`mobile-menu-container ${isActive ? "active" : ""}`}>
+        <div className="close-btn" onClick={() => setIsActive(false)}>
           <CgClose />
         </div>
 
-        <ul>
+        <ul className="menu-items" onClick={() => setIsActive(false)}>
           <li>
-            <a href="#">About</a>
+            <a href="#info">About</a>
           </li>
           <li>
-            <a href="#">Course Details</a>
+            <a href="#topics">Course Details</a>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a href="#blog">Blog</a>
           </li>
           <li>
-            <a href="#">Testimonials</a>
+            <a href="#testimonials">Testimonials</a>
           </li>
         </ul>
       </div>

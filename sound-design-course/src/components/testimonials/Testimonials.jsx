@@ -25,8 +25,8 @@ const Testimonials = () => {
               <div className="name">Robert Fox</div>
               <div className="company-name">Google</div>
               <div className="review">
-                I got to learn a lot about music production with this course.
-                Thanks :&#x29;
+                I got to learn a lot about music production <br /> with this
+                course. Thanks :&#x29;
               </div>
             </div>
           </div>

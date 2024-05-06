@@ -38,6 +38,7 @@
 @media (max-width: 1040px) {
   #testimonials .content-container {
     flex-direction: column;
+    gap: 16px;
   }
 
   #testimonials .testimonial {
@@ -50,8 +51,13 @@
 @media (max-width: 720px) {
   #testimonials .testimonial {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 16px;
+  }
+
+  #testimonials .testimonial .review-details {
+    text-align: start;
   }
 
   #testimonials .testimonial .review {

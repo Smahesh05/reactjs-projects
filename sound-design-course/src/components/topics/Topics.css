@@ -49,7 +49,7 @@
 @media (max-width: 1040px) {
   #topics .topic-image img {
     width: 385px;
-    height: 28px;
+    height: 280px;
   }
 }
 
@@ -58,7 +58,7 @@
     display: none;
   }
 
-  #topics .bg-element-1 {
+  #topics .wrapper .bg-element-1 {
     right: 32px;
   }
 }
