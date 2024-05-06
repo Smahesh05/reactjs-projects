@@ -1,0 +1,76 @@
+header {
+  min-height: 100vh;
+  background: url(../../assets/bgElement.png);
+  background-size: cover;
+  background-position: center;
+}
+
+header .wrapper {
+  position: relative;
+  height: 100vh;
+}
+
+header .cta {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 453px;
+  /* height: 326px; */
+  background: rgba(0, 0, 0, 0.5);
+  border: 4px solid #ffffff;
+  border-radius: 20px 20px 0px 0px;
+  padding: 50px 40px;
+  backdrop-filter: blur(25px);
+}
+
+header .cta .course-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+}
+
+header .cta .course-name::after {
+  content: "";
+  position: absolute;
+  background-color: var(--red-color);
+  width: 60px;
+  height: 4px;
+  left: 0;
+  bottom: -10px;
+}
+
+header .cta h1 {
+  font-family: "Alegreya";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+header .cta .demo-btn {
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  background: var(--red-color);
+}
+
+@media (max-width: 1040px) {
+  header .cta {
+    width: 356px;
+  }
+}
+
+@media (max-width: 720px) {
+  header .cta {
+    width: unset;
+    right: 32px;
+    left: 32px;
+  }
+
+  header .cta h1 {
+    font-size: 32px;
+  }
+}

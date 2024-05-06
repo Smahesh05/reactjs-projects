@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setCredentials } from "../../slices/authSlice";
+import { useAskQuestionMutation } from "../../slices/questionApiSlice";
 import "./AskQuestion.css";
 
 const AskQuestionPage = () => {
@@ -6,11 +10,45 @@ const AskQuestionPage = () => {
   const [questionBody, setQuestionBody] = useState("");
   const [questionTags, setQuestionTags] = useState("");
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { userInfo } = useSelector((state) => state.auth);
+
+  const [askQuestion] = useAskQuestionMutation();
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+
+    if (!questionTitle || !questionBody || !questionTags) {
+      return alert("Please enter all details");
+    }
+
+    try {
+      let str = questionTags.split(" ");
+      const res = await askQuestion({
+        questionTitle,
+        questionBody,
+        str,
+        userPosted: userInfo.result.name,
+      }).unwrap();
+      dispatch(setCredentials({ ...res }));
+
+      navigate("/questions");
+      setQuestionTitle("");
+      setQuestionBody("");
+      setQuestionTags("");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="ask-questios">
       <div className="ask-ques-container">
         <h1>Ask a public Question</h1>
-        <form>
+
+        <form onSubmit={submitHandler}>
           <div className="ask-form-container">
             <label htmlFor="ask-ques-title">
               <h4>Title</h4>
@@ -55,9 +93,7 @@ const AskQuestionPage = () => {
                 type="text"
                 value={questionTags}
                 id="ask-ques-tags"
-                onChange={(e) => {
-                  setQuestionTags(e.target.value.split(" "));
-                }}
+                onChange={(e) => setQuestionTags(e.target.value)}
                 placeholder="e.g. (xml typescript wordpress)"
               />
             </label>

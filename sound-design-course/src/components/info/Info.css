@@ -1,0 +1,51 @@
+#info .info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 4px;
+}
+
+#info .info-content .amount {
+  font-weight: 900;
+  font-size: 40px;
+}
+
+#info .info-content .type {
+  font-family: "Alegreya", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+#info .wrapper {
+  position: relative;
+}
+
+#info .bg-element-2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 720px) {
+  #info .content-container {
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  #info .info-content img {
+    height: 100px;
+  }
+
+  #info .info-content .amount {
+    font-size: 32px;
+  }
+
+  #info .info-content .type {
+    font-size: 24px;
+  }
+
+  #info .bg-element-2 {
+    left: 32px;
+  }
+}

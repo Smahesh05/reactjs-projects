@@ -16,8 +16,8 @@ app.use(
   })
 );
 
-app.use("/api/users/", require("./routes/userRoutes"));
-app.use("/api/questions/", require("./routes/questionRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
+app.use("/api/questions", require("./routes/questionRoutes"));
 
 app.listen(PORT, () => console.log(`PORT running on port ${PORT}`));
 connectDB();
