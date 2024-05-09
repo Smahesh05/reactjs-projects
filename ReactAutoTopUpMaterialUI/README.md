@@ -9,3 +9,12 @@ Make sure you have Node.js and npm installed on your machine. Then, navigate to 
 ```bash
 npm install @mui/material @emotion/react @emotion/styled
 ```
+
+## Running the Project
+
+To run the project, make sure you have a React development environment set up. Then, use the following command to start the development server:
+
+```bash
+npm run dev
+```
+
