@@ -1,0 +1,1352 @@
+[
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "CERC",
+        "slug": "central-cerc"
+      },
+      "grandChild": {
+        "name": "orders",
+        "slug": "central-cerc-orders"
+      }
+    },
+    "id": 1,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-7.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "CERC",
+        "slug": "central-cerc"
+      },
+      "grandChild": {
+        "name": "petitions",
+        "slug": "central-cerc-petitions"
+      }
+    },
+    "id": 2,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-6.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "CERC",
+        "slug": "central-cerc"
+      },
+      "grandChild": {
+        "name": "Consultation on Draft Regulations",
+        "slug": "central-cerc-codr"
+      }
+    },
+    "id": 3,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-5.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "CERC",
+        "slug": "central-cerc"
+      },
+      "grandChild": {
+        "name": "Regulations",
+        "slug": "central-cerc-regulation"
+      }
+    },
+    "id": 4,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-4.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "CERC",
+        "slug": "central-cerc"
+      },
+      "grandChild": {
+        "name": "Policies",
+        "slug": "central-cerc-policy"
+      }
+    },
+    "id": 5,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-3.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "CERC",
+        "slug": "central-cerc"
+      },
+      "grandChild": {
+        "name": "Eninrac Comments on Draft Regulations",
+        "slug": "central-cerc-ecodr"
+      }
+    },
+    "id": 6,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-2.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "CERC",
+        "slug": "central-cerc"
+      },
+      "grandChild": {
+        "name": "Public Hearings",
+        "slug": "central-cerc-publichearings"
+      }
+    },
+    "id": 7,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-1.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "CERC",
+        "slug": "central-cerc"
+      },
+      "grandChild": {
+        "name": "Ammendments",
+        "slug": "central-cerc-ammendments"
+      }
+    },
+    "id": 8,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-7.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "CERC",
+        "slug": "central-cerc"
+      },
+      "grandChild": {
+        "name": "MOM",
+        "slug": "central-cerc-mom"
+      }
+    },
+    "id": 9,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-6.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "MoP",
+        "slug": "central-mop"
+      },
+      "grandChild": {
+        "name": "Regulations",
+        "slug": "central-mop-regulations"
+      }
+    },
+    "id": 10,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-5.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "MoP",
+        "slug": "central-mop"
+      },
+      "grandChild": {
+        "name": "Policy",
+        "slug": "central-mop-policy"
+      }
+    },
+    "id": 11,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-4.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "MoP",
+        "slug": "central-mop"
+      },
+      "grandChild": {
+        "name": "Announcements",
+        "slug": "central-mop-announcements"
+      }
+    },
+    "id": 12,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-2.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "MNRE",
+        "slug": "central-mnre"
+      },
+      "grandChild": {
+        "name": "Regulations",
+        "slug": "central-mnre-regulations"
+      }
+    },
+    "id": 13,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-3.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "MNRE",
+        "slug": "central-mnre"
+      },
+      "grandChild": {
+        "name": "Policy",
+        "slug": "central-mnre-policy"
+      }
+    },
+    "id": 14,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-1.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "MNRE",
+        "slug": "central-mnre"
+      },
+      "grandChild": {
+        "name": "Announcements",
+        "slug": "central-mnre-announcements"
+      }
+    },
+    "id": 15,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-7.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "MoF",
+        "slug": "central-mof"
+      },
+      "grandChild": {
+        "name": "Announcements",
+        "slug": "central-mof-announcements"
+      }
+    },
+    "id": 16,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-6.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "MoC",
+        "slug": "central-moc"
+      },
+      "grandChild": {
+        "name": "Announcements",
+        "slug": "central-moc-announcements"
+      }
+    },
+    "id": 17,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-5.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "Apellate Tribunal",
+        "slug": "central-apellatetribunal"
+      },
+      "grandChild": {
+        "name": "Landmark Judgements",
+        "slug": "central-apellatetribunal-landmarkjudgements"
+      }
+    },
+    "id": 18,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-4.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "Apellate Tribunal",
+        "slug": "central-apellatetribunal"
+      },
+      "grandChild": {
+        "name": "Interim Orders",
+        "slug": "central-apellatetribunal-interimorders"
+      }
+    },
+    "id": 19,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-3.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "Apellate Tribunal",
+        "slug": "central-apellatetribunal"
+      },
+      "grandChild": {
+        "name": "Final Orders",
+        "slug": "central-apellatetribunal-finalorders"
+      }
+    },
+    "id": 20,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-2.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "Honb'le Supreme Court",
+        "slug": "central-supremecourt"
+      },
+      "grandChild": {
+        "name": "Landmark Judgements",
+        "slug": "central-supremecourt-landmarkjudgements"
+      }
+    },
+    "id": 21,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-1.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "Honb'le Supreme Court",
+        "slug": "central-supremecourt"
+      },
+      "grandChild": {
+        "name": "Interim Orders",
+        "slug": "central-supremecourt-interimorders"
+      }
+    },
+    "id": 22,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-7.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Central",
+        "slug": "central"
+      },
+      "child": {
+        "name": "Honb'le Supreme Court",
+        "slug": "central-supremecourt"
+      },
+      "grandChild": {
+        "name": "Final Orders",
+        "slug": "central-supremecourt-finalorders"
+      }
+    },
+    "id": 23,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-6.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "State",
+        "slug": "state"
+      },
+      "child": {
+        "name": "Gujrat",
+        "slug": "state-gujrat"
+      },
+      "grandChild": {
+        "name": "GERC",
+        "slug": "state-gujrat-gerc"
+      }
+    },
+    "id": 24,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-5.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "State",
+        "slug": "state"
+      },
+      "child": {
+        "name": "Maharashtra",
+        "slug": "state-maharashtra"
+      },
+      "grandChild": {
+        "name": "MERC",
+        "slug": "state-maharashtra-merc"
+      }
+    },
+    "id": 25,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-4.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "State",
+        "slug": "state"
+      },
+      "child": {
+        "name": "Rajsthan",
+        "slug": "state-rajsthan"
+      },
+      "grandChild": {
+        "name": "RERC",
+        "slug": "state-rajsthan-rerc"
+      }
+    },
+    "id": 26,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-3.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "State",
+        "slug": "state"
+      },
+      "child": {
+        "name": "Panjab",
+        "slug": "state-panjab"
+      },
+      "grandChild": {
+        "name": "PERC",
+        "slug": "state-panjab-perc"
+      }
+    },
+    "id": 27,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-2.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "State",
+        "slug": "state"
+      },
+      "child": {
+        "name": "Haryana",
+        "slug": "state-haryana"
+      },
+      "grandChild": {
+        "name": "HERC",
+        "slug": "state-haryana-herc"
+      }
+    },
+    "id": 28,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-1.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "State",
+        "slug": "state"
+      },
+      "child": {
+        "name": "Uttarakhand",
+        "slug": "state-uttarakhand"
+      },
+      "grandChild": {
+        "name": "UERC",
+        "slug": "state-uttarakhand-uerc"
+      }
+    },
+    "id": 29,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-7.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "State",
+        "slug": "state"
+      },
+      "child": {
+        "name": "Odisa",
+        "slug": "state-odisa"
+      },
+      "grandChild": {
+        "name": "OERC",
+        "slug": "state-odisa-oerc"
+      }
+    },
+    "id": 30,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-6.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "State",
+        "slug": "state"
+      },
+      "child": {
+        "name": "Bihar",
+        "slug": "state-bihar"
+      },
+      "grandChild": {
+        "name": "BERC",
+        "slug": "state-bihar-berc"
+      }
+    },
+    "id": 31,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-5.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "State",
+        "slug": "state"
+      },
+      "child": {
+        "name": "Asam",
+        "slug": "state-asam"
+      },
+      "grandChild": {
+        "name": "AERC",
+        "slug": "state-asam-aerc"
+      }
+    },
+    "id": 32,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-4.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Transmission",
+        "slug": "powertansmission"
+      },
+      "child": {
+        "name": "Connectivity",
+        "slug": "powertansmission-connectivity"
+      },
+      "grandChild": {
+        "name": "STU",
+        "slug": "powertansmission-connectivity-stu"
+      }
+    },
+    "id": 33,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-3.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Transmission",
+        "slug": "powertansmission"
+      },
+      "child": {
+        "name": "Connectivity",
+        "slug": "powertansmission-connectivity"
+      },
+      "grandChild": {
+        "name": "CTU",
+        "slug": "powertansmission-connectivity-ctu"
+      }
+    },
+    "id": 34,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-2.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Transmission",
+        "slug": "powertansmission"
+      },
+      "child": {
+        "name": "Charges",
+        "slug": "powertansmission-charges"
+      },
+      "grandChild": {
+        "name": "STU",
+        "slug": "powertansmission-charges-stu"
+      }
+    },
+    "id": 35,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-1.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Transmission",
+        "slug": "powertansmission"
+      },
+      "child": {
+        "name": "Charges",
+        "slug": "powertansmission-charges"
+      },
+      "grandChild": {
+        "name": "CTU",
+        "slug": "powertansmission-charges-ctu"
+      }
+    },
+    "id": 36,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-7.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Transmission",
+        "slug": "powertansmission"
+      },
+      "child": {
+        "name": "Govt Announcements",
+        "slug": "powertansmission-govtannouncements"
+      },
+      "grandChild": {
+        "name": "Central",
+        "slug": "powertansmission-govtannouncements-central"
+      }
+    },
+    "id": 37,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-6.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Transmission",
+        "slug": "powertansmission"
+      },
+      "child": {
+        "name": "Govt Announcements",
+        "slug": "powertansmission-govtannouncements"
+      },
+      "grandChild": {
+        "name": "State",
+        "slug": "powertansmission-govtannouncements-state"
+      }
+    },
+    "id": 38,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-5.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Bid Updates",
+        "slug": "bidupdates"
+      },
+      "child": {
+        "name": "Bid Invites",
+        "slug": "bidupdates-bidinvites"
+      },
+      "grandChild": {
+        "name": "SECI",
+        "slug": "bidupdates-bidinvites-seci"
+      }
+    },
+    "id": 39,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-4.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Bid Updates",
+        "slug": "bidupdates"
+      },
+      "child": {
+        "name": "Bid Invites",
+        "slug": "bidupdates-bidinvites"
+      },
+      "grandChild": {
+        "name": "PSU",
+        "slug": "bidupdates-bidinvites-psu"
+      }
+    },
+    "id": 40,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-3.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Bid Updates",
+        "slug": "bidupdates"
+      },
+      "child": {
+        "name": "Bid Invites",
+        "slug": "bidupdates-bidinvites"
+      },
+      "grandChild": {
+        "name": "State Govt",
+        "slug": "bidupdates-bidinvites-state"
+      }
+    },
+    "id": 41,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-2.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Bid Updates",
+        "slug": "bidupdates"
+      },
+      "child": {
+        "name": "Bid Invites",
+        "slug": "bidupdates-bidinvites"
+      },
+      "grandChild": {
+        "name": "Others",
+        "slug": "bidupdates-bidinvites-others"
+      }
+    },
+    "id": 42,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-1.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Open Access",
+        "slug": "openaccess"
+      },
+      "child": {
+        "name": "Solar",
+        "slug": "openaccess-solar"
+      },
+      "grandChild": {
+        "name": "Charges",
+        "slug": "openaccess-solar-charges"
+      }
+    },
+    "id": 43,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-7.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Open Access",
+        "slug": "openaccess"
+      },
+      "child": {
+        "name": "Solar",
+        "slug": "openaccess-solar"
+      },
+      "grandChild": {
+        "name": "Duty",
+        "slug": "openaccess-solar-duty"
+      }
+    },
+    "id": 44,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-6.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Open Access",
+        "slug": "openaccess"
+      },
+      "child": {
+        "name": "Solar",
+        "slug": "openaccess-solar"
+      },
+      "grandChild": {
+        "name": "Waivers",
+        "slug": "openaccess-solar-waivers"
+      }
+    },
+    "id": 45,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-5.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Open Access",
+        "slug": "openaccess"
+      },
+      "child": {
+        "name": "Solar",
+        "slug": "openaccess-solar"
+      },
+      "grandChild": {
+        "name": "Banking",
+        "slug": "openaccess-solar-banking"
+      }
+    },
+    "id": 46,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-4.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Open Access",
+        "slug": "openaccess"
+      },
+      "child": {
+        "name": "Wind",
+        "slug": "openaccess-wind"
+      },
+      "grandChild": {
+        "name": "Charges",
+        "slug": "openaccess-wind-charges"
+      }
+    },
+    "id": 47,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-3.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Open Access",
+        "slug": "openaccess"
+      },
+      "child": {
+        "name": "Wind",
+        "slug": "openaccess-wind"
+      },
+      "grandChild": {
+        "name": "Duty",
+        "slug": "openaccess-wind-duty"
+      }
+    },
+    "id": 48,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-2.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Open Access",
+        "slug": "openaccess"
+      },
+      "child": {
+        "name": "Wind",
+        "slug": "openaccess-wind"
+      },
+      "grandChild": {
+        "name": "Waivers",
+        "slug": "openaccess-wind-waivers"
+      }
+    },
+    "id": 49,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-1.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Open Access",
+        "slug": "openaccess"
+      },
+      "child": {
+        "name": "Wind",
+        "slug": "openaccess-wind"
+      },
+      "grandChild": {
+        "name": "Banking",
+        "slug": "openaccess-wind-banking"
+      }
+    },
+    "id": 50,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-3.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Open Access",
+        "slug": "openaccess"
+      },
+      "child": {
+        "name": "Hybrid",
+        "slug": "openaccess-hybrid"
+      },
+      "grandChild": {
+        "name": "Charges",
+        "slug": "openaccess-hybrid-charges"
+      }
+    },
+    "id": 51,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-4.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Open Access",
+        "slug": "openaccess"
+      },
+      "child": {
+        "name": "Hybrid",
+        "slug": "openaccess-hybrid"
+      },
+      "grandChild": {
+        "name": "Duty",
+        "slug": "openaccess-hybrid-duty"
+      }
+    },
+    "id": 52,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-5.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Open Access",
+        "slug": "openaccess"
+      },
+      "child": {
+        "name": "Hybrid",
+        "slug": "openaccess-hybrid"
+      },
+      "grandChild": {
+        "name": "Waivers",
+        "slug": "openaccess-hybrid-waivers"
+      }
+    },
+    "id": 53,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-6.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  },
+  {
+    "category": {
+      "parent": {
+        "name": "Open Access",
+        "slug": "openaccess"
+      },
+      "child": {
+        "name": "Hybrid",
+        "slug": "openaccess-hybrid"
+      },
+      "grandChild": {
+        "name": "Banking",
+        "slug": "openaccess-hybrid-banking"
+      }
+    },
+    "id": 54,
+    "name": "CERC Approves New Tariff Regulations",
+    "title": "Central Electricity Regulatory Commission Introduces Updated Tariff Structure",
+    "description": "The CERC has approved new tariff regulations aimed at promoting renewable energy integration and ensuring grid stability.",
+    "imageUrl": "assets/images/category-item-7.webp",
+    "createdAt": "2024-08-01T09:30:00Z",
+    "author": "Mahesh",
+    "topArticle": true,
+    "tags": ["CERC", "Tariff", "Regulations", "Renewable Energy"]
+  }
+]
