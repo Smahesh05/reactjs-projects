@@ -1,4 +1,5 @@
 import React from "react";
+import AphexChart from "../components/PieChartCard";
 
 function Dashboard() {
   return (
@@ -34,9 +35,7 @@ function Dashboard() {
                 <h6 className="fw-bold">Card title</h6>
               </div>
               <div className="card-body">
-                <div className="w-100 h-100 d-flex justify-content-center align-items-center">
-                  <button className="btn btn-light fw-500">+ Add Widget</button>
-                </div>
+                <AphexChart />
               </div>
             </div>
           </div>
